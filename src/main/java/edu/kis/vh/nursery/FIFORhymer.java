@@ -17,3 +17,5 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         return ret;
     }
 }
+
+//Nie wygolowanie sie z komputera na zajeciach
