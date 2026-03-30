@@ -4,10 +4,10 @@ public class IntLinkedList {
 
     private static final int DEFAULT_RETURN_VALUE = -1;
 
-    Node last;
-    int size;
+    private Node last;
+    private int size;
 
-    public void push(int i) {
+    private void push(int i) {
         if (last == null)
             last = new Node(i);
         else {
@@ -18,21 +18,21 @@ public class IntLinkedList {
         size++;
     }
 
-    public boolean isEmpty() {
+    private boolean isEmpty() {
         return size == 0;
     }
 
-    public boolean isFull() {
+    private boolean isFull() {
         return false;
     }
 
-    public int top() {
+    private int top() {
         if (isEmpty())
             return DEFAULT_RETURN_VALUE;
         return last.value;
     }
 
-    public int pop() {
+    private int pop() {
         if (isEmpty())
             return DEFAULT_RETURN_VALUE;
 
