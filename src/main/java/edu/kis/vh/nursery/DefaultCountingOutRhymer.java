@@ -9,7 +9,7 @@ public class DefaultCountingOutRhymer {
     private static final int DEFAULT_RETURN_VALUE = -1;
 
     private final int[] numbers = new int[CAPACITY];
-    public int total = EMPTY_RHYMER_INDICATOR;
+    private int total = EMPTY_RHYMER_INDICATOR;
 
     public void countIn(int in) {
         if (!isFull())
@@ -38,5 +38,9 @@ public class DefaultCountingOutRhymer {
 
     public int getTotal() {
         return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
     }
 }
