@@ -5,21 +5,19 @@ public class IntLinkedList {
     private static final int DEFAULT_RETURN_VALUE = -1;
 
     private Node last;
-    private int size;
 
     private void push(int i) {
         if (last == null)
             last = new Node(i);
         else {
-            last.next = new Node(i);
-            last.next.prev = last;
-            last = last.next;
+            last.setNext(new Node(i));
+            last.getNext().setPrev(last);
+            last = last.getNext();
         }
-        size++;
     }
 
     private boolean isEmpty() {
-        return size == 0;
+        return last == null;
     }
 
     private boolean isFull() {
@@ -29,16 +27,15 @@ public class IntLinkedList {
     private int top() {
         if (isEmpty())
             return DEFAULT_RETURN_VALUE;
-        return last.value;
+        return last.getValue();
     }
 
     private int pop() {
         if (isEmpty())
             return DEFAULT_RETURN_VALUE;
 
-        int ret = last.value;
-        last = last.prev;
-        size--;
+        int ret = last.getValue();
+        last = last.getPrev();
         return ret;
     }
 }
