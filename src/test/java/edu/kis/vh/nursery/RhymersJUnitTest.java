@@ -3,8 +3,16 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * Zadaniem tej klasy jest testowanie poszczególnych metod z klasy DefaultCountingOutRhymer
+ */
 public class RhymersJUnitTest {
     // Projekt przechodzi testy jednostkowe
+
+    /**
+     * Metoda sprawdza poprawność działania metody countIn, odpowiadającej za dodawanie elementów do
+     * stosu
+     */
     @Test
     public void testCountIn() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -14,7 +22,9 @@ public class RhymersJUnitTest {
         int result = rhymer.peekaboo();
         Assert.assertEquals(testValue, result);
     }
-
+    /**
+     * Metoda sprawdza poprawność działania metody callCheck, odpowiadającej za sprawdzanie, czy stos jest pusty
+     */
     @Test
     public void testCallCheck() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -26,7 +36,9 @@ public class RhymersJUnitTest {
         result = rhymer.callCheck();
         Assert.assertEquals(false, result);
     }
-
+    /**
+     * Metoda sprawdza poprawność działania metody isFull, odpowiadającej za sprawdzanie, czy stos jest pełny
+     */
     @Test
     public void testIsFull() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -40,7 +52,10 @@ public class RhymersJUnitTest {
         boolean result = rhymer.isFull();
         Assert.assertEquals(true, result);
     }
-
+    /**
+     * Metoda sprawdza poprawność działania metody peekaboo, odpowiadającej za zwracanie wartości z końca
+     * stosu bez usuwania jej
+     */
     @Test
     public void testPeekaboo() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -57,7 +72,10 @@ public class RhymersJUnitTest {
         result = rhymer.peekaboo();
         Assert.assertEquals(testValue, result);
     }
-
+    /**
+     * Metoda sprawdza poprawność działania metody countOut, odpowiadającej za zwracanie wartości z końca
+     * stosu i usunięcie jej
+     */
     @Test
     public void testCountOut() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();

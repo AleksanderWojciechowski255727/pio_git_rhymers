@@ -3,8 +3,15 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
+/**
+ * Klasa demonstrująca pokazująca działanie różnych typów stosów
+ * Tworzy ona stos normalny, fałszywy, FIFO i Hanoi, dodaje do każdej z nich elementy a potem je wyświetla
+ */
 class RhymersDemo {
-
+    /**
+     * Punkt wejścia programu, tworzy fabrykę po czym wysyła ją do metody testRhymers
+     * @param args argumenty wiersza poleceń
+     */
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
 
@@ -12,6 +19,10 @@ class RhymersDemo {
 
     }
 
+    /**
+     * Testuje działanie różnych rodzajów stosów
+     * @param factory fabryka tworząca różne implementacje różnych stosów
+     */
     private static void testRhymers(RhymersFactory factory) {
         DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
